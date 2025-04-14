@@ -1,18 +1,94 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## USAGE OF THE COMPONENTS
 
-First, run the development server:
+### MulaCustomAutoComplete
+### Preview
+![alt text](image-1.png)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install @your-org/my-ui-library@0.2.2
 ```
+
+
+Install the package using npm:
+```bash
+npm install @your-org/my-ui-library@0.2.2
+```
+
+### Usage
+
+```
+import { MulabCustomAutocomplete } from "@your-org/my-ui-library";
+
+const FormComponent = () => {
+const languageOptions = [
+    { label: "Java", value: "java" },
+    { label: "Python", value: "python" }
+]
+
+const form = useForm()
+const onSubmit = (data: any) => {
+    console.log(data)
+}
+return (
+    <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+            <MulabCustomAutocomplete
+            control={form.control}
+            name="language"
+            label="Programming Language"
+            description="Select your preferred programming language"
+            placeholder="Select a language"
+            items={languageOptions}
+        />
+        </form>
+    </Form>
+)}
+```
+##
+### MulabInput
+### Preview
+![alt text](image-2.png)
+
+
+
+Install the package using npm:
+```bash
+npm install @your-org/my-ui-library@0.2.2
+```
+
+### Usage
+
+```
+import { MulabCustomAutocomplete } from "@your-org/my-ui-library";
+
+const FormComponent = () => {
+
+const form = useForm()
+const onSubmit = (data: any) => {
+    console.log(data)
+}
+return (
+    <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+            <MulabInput
+            control={form.control}
+            name="username"
+            label="Email Address"
+            description="Enter Your Email Address"
+            placeholder="example@email.com"
+            type="email"
+            />
+        />
+        </form>
+    </Form>
+)}
+```
+##
+
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

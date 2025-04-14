@@ -1,4 +1,3 @@
 import * as React from "react";
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-}
-export declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
+declare function Input({ className, type, ...props }: React.ComponentProps<"input">): import("react/jsx-runtime").JSX.Element;
+export { Input };
