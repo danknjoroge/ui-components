@@ -1,7 +1,7 @@
 import React from 'react'
-import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
+import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Control, FieldPath, FieldValues } from 'react-hook-form'
-import { MultiSelect } from '../ui/multi-select'
+import { MultiSelect } from '@/components/ui/multi-select'
 
 type InputProps<T extends FieldValues> = {
     label: string
